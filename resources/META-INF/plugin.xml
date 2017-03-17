@@ -1,5 +1,5 @@
 <idea-plugin version="2">
-  <id>com.linkedin.review</id>
+  <id>com.senthil</id>
   <name>Offline Review Board</name>
   <version>0.1</version>
   <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
@@ -22,23 +22,8 @@
   <depends>Git4Idea</depends>
   <depends>Subversion</depends>
 
-  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
-       on how to target different products -->
-  <!-- uncomment to enable plugin in all products
-  <depends>com.intellij.modules.lang</depends>
-  -->
-<!--
-<toolWindow id="Review.Board" factoryClass="com.linkedin.rb.ui.toolswindow.ReviewBoardToolsWindow" anchor="bottom" canCloseContents="true"/>
-    <projectService serviceImplementation="com.ritesh.idea.plugin.state.ConfigurationPersistance"
-    serviceInterface="com.ritesh.idea.plugin.state.ConfigurationPersistance"/>
-    <projectService serviceImplementation="com.ritesh.idea.plugin.state.DefaultStatePersistance"
-                    serviceInterface="com.ritesh.idea.plugin.state.DefaultStatePersistance"/>
-    <projectConfigurable instance="com.ritesh.idea.plugin.state.SettingsPage"/>
-
--->
-
   <extensions defaultExtensionNs="com.intellij">
-    <toolWindow factoryClass="com.senthil.components.RBWindow" canCloseContents="true" id ="Linkedin Review" anchor="bottom" />
+    <toolWindow factoryClass="com.senthil.components.RBWindow" canCloseContents="true" id ="Review Board" anchor="bottom" />
     <projectConfigurable instance="com.senthil.state.SettingsPage"/>
     <projectService serviceImplementation="com.senthil.state.ConfigurationPersistence"
                     serviceInterface="com.senthil.state.ConfigurationPersistence"/>

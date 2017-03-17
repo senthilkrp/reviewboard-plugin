@@ -80,7 +80,7 @@ class RBTool extends SimpleDiffTool {
   @NotNull
   @Override
   public String getName() {
-    return "Linkedin Review Tool";
+    return "Review Board";
   }
 
   @Override

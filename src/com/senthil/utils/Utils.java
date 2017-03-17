@@ -33,19 +33,6 @@ import org.jetbrains.annotations.CalledInBackground;
 public class Utils {
 
   private static final ScheduledExecutorService schedulerExecutor = Executors.newScheduledThreadPool(10);
-  static Pattern pattern = Pattern.compile("^https://rb.corp.linkedin.com/api/repositories/.*");
-
-  public static Icon getIcon(Integer number) {
-//    UIUtil.createImage(1,1, BufferedImage.TYPE_INT_RGB);
-//    Graphics2D g2d = img.createGraphics();
-//    Font font = new Font("Arial", Font.PLAIN, 48);
-//    g2d.setFont(font);
-//    FontMetrics fm = g2d.getFontMetrics();
-//    int width = fm.stringWidth(text);
-//    int height = fm.getHeight();
-//    g2d.dispose();
-    return null;
-  }
 
   public static int getRepoId(Project project) {
     int repoId = -1;
@@ -92,7 +79,7 @@ public class Utils {
   }
 
   public static void showToolWindow(Project project, JComponent component, String title) {
-    ToolWindow toolWindow = ToolWindowManager.getInstance(project).getToolWindow("Linkedin Review");
+    ToolWindow toolWindow = ToolWindowManager.getInstance(project).getToolWindow("Review Board");
     toolWindow.getContentManager().removeAllContents(true);
     ContentFactory contentFactory = ContentFactory.SERVICE.getInstance();
     toolWindow.getContentManager().addContent(contentFactory.createContent(component, title, false));
